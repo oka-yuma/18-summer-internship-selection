@@ -1,0 +1,23 @@
+body {
+    font-family: inherit;
+}
+
+.input-list {
+    padding-top: 1rem;
+    text-align: left;
+}
+
+.sorting[data-sort-order=both]{
+    background: url(../images/sort_both.png) no-repeat center right;
+    cursor: pointer;
+}
+
+.sorting[data-sort-order=asc]{
+    background: url(../images/sort_asc.png) no-repeat center right;
+    cursor: pointer;
+}
+
+.sorting[data-sort-order=desc]{
+    background: url(../images/sort_desc.png) no-repeat center right;
+    cursor: pointer;
+}

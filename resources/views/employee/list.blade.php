@@ -44,8 +44,8 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        {!! Form::hidden('sort_key') !!}
-                        {!! Form::hidden('sort_order') !!}
+                        {!! Form::hidden('sort_key', 'id') !!}
+                        {!! Form::hidden('sort_order', 'asc') !!}
                     </div>
                 </div>
                 <div class="form-group">

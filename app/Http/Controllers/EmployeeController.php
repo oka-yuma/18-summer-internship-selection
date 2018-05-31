@@ -34,15 +34,18 @@ class EmployeeController extends Controller
         $employees = $employees->where('given_name', 'like', '%' . $request->get('given_name') . '%');
         $employees = $employees->where('family_name_kana', 'like', '%' . $request->get('family_name_kana') . '%');
         $employees = $employees->where('given_name_kana', 'like', '%' . $request->get('given_name_kana') . '%');
+
+        // ↓ここからがバグがあります
         if ($request->get('department_id')) {
-            $employees = $employees->where('divisions.department_id', $request->get('department_id'));
+            $employees = $employees->where('divisions.department_id', 'like', '%' . $request->get('department_id') . '%');
         }
         if ($request->get('division_id')) {
-            $employees = $employees->where('employees.division_id',  $request->get('division_id'));
+            $employees = $employees->where('employees.division_id', 'like', '%' . $request->get('division_id') . '%');
         }
+        // ↑ここまでにバグがあります
 
         // ソート
-        $employees = $employees->orderBy($request->get('sort_key', 'id'),$request->get('sort_order', 'asc'));
+        $employees = $employees->orderBy($request->get('sort_key', 'id'), $request->get('sort_order', 'asc'));
         $employees = $employees->get();
 
         $allDepartments = Department::getSelectList();

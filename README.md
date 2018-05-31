@@ -9,7 +9,8 @@
 1. .envの編集
 1. ターミナルを起動し、アプリケーションを配置したディレクトリに移動する
 1. 「composer install」コマンドを実行する
-1. 「php artisan migrate --seed 」
+1. 「composer dump-autoload」を実行する
+1. 「php artisan migrate --seed 」を実行する
 1. デモの画面が表示されることの確認
 1. ■バグfix課題
 bug_01_sampleをチェックアウト  

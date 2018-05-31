@@ -43,8 +43,11 @@ class Employee extends BaseModel
      */
     public function getBirthdayJpAttribute()
     {
+        // Carbon というクラスがありますので、下記URLを参考にしてください
+        // http://carbon.nesbot.com/docs/#api-formatting
+        // 他の日本語記事を検索してもいいと思います。
         $dateCarbon = new Carbon($this->birthday);
-        return $dateCarbon->format('Y年m月d日');
+        return $dateCarbon;
     }
 
     /**
@@ -53,8 +56,11 @@ class Employee extends BaseModel
      */
     public function getHireDateJpAttribute()
     {
-        $dateCarbon = new Carbon($this->hire_date);
-        return $dateCarbon->format('Y年m月d日');
+        // Carbon というクラスがありますので、下記URLを参考にしてください
+        // http://carbon.nesbot.com/docs/#api-formatting
+        // 他の日本語記事を検索してもいいと思います。
+        $dateCarbon = $this->hire_date;
+        return $dateCarbon;
     }
 
     /**

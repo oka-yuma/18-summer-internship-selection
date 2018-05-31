@@ -89,7 +89,7 @@
                         <td>{{$employee->position->name}}</td>
                         <td>{{$employee->birthday_jp}}</td>
                         <td>{{$employee->age}}歳</td>
-                        <td>{{$employee->hire_date_jp}}</td>
+                        <td>{{$employee->hire_date}}</td>
                     </tr>
                     @endforeach
                     </tbody>

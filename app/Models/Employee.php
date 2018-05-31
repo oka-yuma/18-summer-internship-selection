@@ -8,7 +8,7 @@ use Carbon\Carbon;
  * @property mixed birthday
  * @property mixed hire_date
  */
-class Employee extends BaseModel
+class Employees extends BaseModel
 {
     /**
      * 日付を変形する属性

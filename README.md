@@ -5,6 +5,7 @@
 1. SourceTree インストール
 1. 本リポジトリをクローン（置く場所をXAMPPのhtdocにする）
 1. httpd.confの編集
+1. XAMPP のphpMyAdminからログインし、「asiaquest」というDBを作る
 1. .envの編集
 1. デモの画面が表示されることの確認
 1. ■バグfix課題

@@ -21,6 +21,7 @@ class Employee extends BaseModel
         'created_at',
         'updated_at'
     ];
+
     /**
      * この従業員が所属する課を取得
      */
@@ -47,6 +48,7 @@ class Employee extends BaseModel
         // http://carbon.nesbot.com/docs/#api-formatting
         // 他の日本語記事を検索してもいいと思います。
         $dateCarbon = new Carbon($this->birthday);
+        $dateCarbon = $dateCarbon->format('Y年m月d日');
         return $dateCarbon;
     }
 
@@ -59,7 +61,9 @@ class Employee extends BaseModel
         // Carbon というクラスがありますので、下記URLを参考にしてください
         // http://carbon.nesbot.com/docs/#api-formatting
         // 他の日本語記事を検索してもいいと思います。
-        $dateCarbon = $this->hire_date;
+
+        $dateCarbon = new Carbon($this->hire_date);
+        $dateCarbon = $dateCarbon->format('Y年m月d日');
         return $dateCarbon;
     }
 

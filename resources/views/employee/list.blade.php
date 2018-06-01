@@ -118,6 +118,5 @@
                 + "&sort_key=" + $(this).data("sort-key")
                 + "&sort_order=" + swith_dic[$(this).data("sort-order")];
         });
-
     </script>
 @endsection

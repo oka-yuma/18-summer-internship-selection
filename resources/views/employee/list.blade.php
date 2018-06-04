@@ -88,6 +88,7 @@
                             <th scope="col">入社日</th>
                         </tr>
                         </thead>
+
                         <tbody>
                         @foreach ($employees as $employee)
                             <tr>
@@ -96,7 +97,7 @@
                                 <td>{{$employee->given_name}}</td>
                                 <td>{{$employee->family_name_kana}}</td>
                                 <td>{{$employee->given_name_kana}}</td>
-                                <td>{{$employee->department->name}}</td>
+                                <td>{{$employee->division->department->name}}</td>
                                 <td>{{$employee->division->name}}</td>
                                 <td>{{$employee->position->name}}</td>
                                 <td>{{$employee->birthday_jp}}</td>

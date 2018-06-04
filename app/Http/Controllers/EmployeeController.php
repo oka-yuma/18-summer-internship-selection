@@ -28,7 +28,6 @@ class EmployeeController extends Controller
     {
         $employees = Employee::select('employees.*')
             ->join('divisions', 'divisions.id', '=', 'employees.division_id');
-
         // 絞り込み
         $employees = $employees->where('family_name', 'like', '%' . $request->get('family_name') . '%');
         $employees = $employees->where('given_name', 'like', '%' . $request->get('given_name') . '%');

@@ -47,7 +47,7 @@ class EmployeeController extends Controller
 
         $allDepartments = Department::getSelectList();
         $allDivisions = Division::getSelectList();
-
+        
         return view('employee.list')->with(compact('employees', 'allDepartments', 'allDivisions'));
     }
 }

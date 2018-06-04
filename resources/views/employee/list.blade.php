@@ -94,8 +94,8 @@
                                 <th scope="row">{{$employee->id}}</th>
                                 <td>{{$employee->family_name}}</td>
                                 <td>{{$employee->given_name}}</td>
-                                <td>{{$employee->family_naem_kana}}</td>
-                                <td>{{$employee->given_naem_kana}}</td>
+                                <td>{{$employee->family_name_kana}}</td>
+                                <td>{{$employee->given_name_kana}}</td>
                                 <td>{{$employee->division->department->name}}</td>
                                 <td>{{$employee->division->name}}</td>
                                 <td>{{$employee->position->name}}</td>

@@ -85,12 +85,13 @@
                                 data-sort-order="{{$sort_key !== 'birthday'?'both':$sort_order}}" scope="col">誕生日
                             </th>
                             <th scope="col">年齢</th>
-                            <th scope="col">入社日</th>
+                            <th class="sorting" data-sort-key="hire_date"
+                                data-sort-order="{{$sort_key !== 'hire_date'?'both':$sort_order}}" scope="col">入社日
+                            </th>
                         </tr>
                         </thead>
                         <tbody>
-                        <!-- 正解はわかると思いますが、その変数はどこで宣言されているかに思いを馳せてください。 -->
-                        @foreach ([] as $employee)
+                        @foreach ($employees as $employee)
                             <tr>
                                 <th scope="row">{{$employee->id}}</th>
                                 <td>{{$employee->family_name}}</td>
@@ -119,5 +120,6 @@
                 + "&sort_key=" + $(this).data("sort-key")
                 + "&sort_order=" + swith_dic[$(this).data("sort-order")];
         });
+
     </script>
 @endsection

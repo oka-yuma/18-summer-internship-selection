@@ -34,8 +34,13 @@ class EmployeeController extends Controller
         $employees = $employees->where('given_name', 'like', '%' . $request->get('given_name') . '%');
         $employees = $employees->where('family_name_kana', 'like', '%' . $request->get('family_name_kana') . '%');
         $employees = $employees->where('given_name_kana', 'like', '%' . $request->get('given_name_kana') . '%');
-//        $employees = $employees->where('divisions.department_id', $request->get('department_id'));
-//        $employees = $employees->where('employees.division_id', $request->get('division_id'));
+
+        if ($request->get('department_id')) {
+            $employees = $employees->where('divisions.department_id', $request->get('department_id'));
+        }
+        if ($request->get('division_id')) {
+            $employees = $employees->where('employees.division_id', $request->get('division_id'));
+        }
 
         // ソート
         $employees = $employees->orderBy($request->get('sort_key', 'id'), $request->get('sort_order', 'asc'));

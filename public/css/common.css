@@ -21,3 +21,53 @@ body {
     background: url(../images/sort_desc.png) no-repeat center right;
     cursor: pointer;
 }
+
+.btn{
+    margin-top: 10px;
+}
+
+.navbar-default{
+    background-color: #555;
+}
+
+.navbar-default a{
+    color: white;
+}
+.navbar-default .navbar-brand {
+    color: white;
+}
+
+.input-list{
+    margin: 40px auto 0;
+    padding: 10px;
+    display: block;
+    float: none;
+}
+.btn.btn-danger
+{
+    display: block;
+    clear: both;
+    margin: 0 auto;
+}
+.bg-success {
+    background-color: #eee;
+}
+.table {
+    width: 96%;
+    max-width: 100%;
+    margin: 10px auto;
+}
+body {
+    font-family: Raleway,sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #636b6f;
+    background-color: #fff;
+}
+
+.navbar-brand{
+    font-family: 'Quicksand', sans-serif;
+}
+h2{
+    font-weight: lighter;
+}

@@ -4,42 +4,33 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="panel panel-default">
-                    {!! Form::open(['class' =>'form-horizontal' , 'method' => 'GET', 'url' => route('employee.list') ]) !!}
-                    <div class="input-list">
+                <div>
+                    <h2>社員検索</h2>
+                    {!! Form::open(['class' =>'form-horizontal bg-success clearfix' , 'method' => 'GET', 'url' => route('employee.list') ]) !!}
+                    <div class="input-list col-sm-8">
                         <div class="form-group">
-                            <label for="" class="col-md-1 control-label">姓</label>
                             <div class="col-md-6">
-                                {!! Form::text('family_name', null, ['class' => 'form-control']) !!}
+                                {!! Form::text('family_name', null, ['class' => 'form-control', 'placeholder' => '姓']) !!}
+                            </div>
+                            <div class="col-md-6">
+                                {!! Form::text('given_name', null, ['class' => 'form-control', 'placeholder' => '名']) !!}
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="" class="col-md-1 control-label">名</label>
                             <div class="col-md-6">
-                                {!! Form::text('given_name', null, ['class' => 'form-control']) !!}
+                                {!! Form::text('family_name_kana', null, ['class' => 'form-control', 'placeholder' => 'せい']) !!}
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="" class="col-md-1 control-label">せい</label>
                             <div class="col-md-6">
-                                {!! Form::text('family_name_kana', null, ['class' => 'form-control']) !!}
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="" class="col-md-1 control-label">めい</label>
-                            <div class="col-md-6">
-                                {!! Form::text('given_name_kana', null, ['class' => 'form-control']) !!}
+                                {!! Form::text('given_name_kana', null, ['class' => 'form-control', 'placeholder' => 'めい']) !!}
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="" class="col-md-1 control-label">部</label>
-                            <div class="col-md-6">
+                            <div class="col-md-5">
                                 {!! Form::select('department_id', $allDepartments, null, ['class' => 'form-control']) !!}
                             </div>
-                        </div>
-                        <div class="form-group">
                             <label for="" class="col-md-1 control-label">課</label>
-                            <div class="col-md-6">
+                            <div class="col-md-5">
                                 {!! Form::select('division_id', $allDivisions, null, ['class' => 'form-control']) !!}
                             </div>
                         </div>
@@ -49,8 +40,8 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <div class="col-md-1 col-md-offset-1">
-                            <button type="submit" class="btn btn-primary">
+                        <div class="">
+                            <button type="submit" class="btn btn-danger">
                                 検索
                             </button>
                         </div>

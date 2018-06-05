@@ -11,6 +11,7 @@
 1. 「composer install」コマンドを実行する
 1. 「composer dump-autoload」を実行する
 1. 「php artisan migrate --seed 」を実行する
+1. 「php artisan key:generate 」を実行する
 1. デモの画面が表示されることの確認
 1. ■バグfix課題  
 ◆基本的な流れ  
@@ -42,8 +43,3 @@ bug09 EnployeeControllerに書いてあるコメントを参考に、どんな�
 　　ページネーターは１つ戻ると１つ進むだけでお願いします。  
 
 
-
-
-ああああ
-書き換えーーー
-書き換え2度目

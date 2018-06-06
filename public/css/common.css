@@ -7,67 +7,72 @@ body {
     text-align: left;
 }
 
-.sorting[data-sort-order=both]{
+.sorting[data-sort-order=both] {
     background: url(../images/sort_both.png) no-repeat center right;
     cursor: pointer;
 }
 
-.sorting[data-sort-order=asc]{
+.sorting[data-sort-order=asc] {
     background: url(../images/sort_asc.png) no-repeat center right;
     cursor: pointer;
 }
 
-.sorting[data-sort-order=desc]{
+.sorting[data-sort-order=desc] {
     background: url(../images/sort_desc.png) no-repeat center right;
     cursor: pointer;
 }
 
-.btn{
+.btn {
     margin-top: 10px;
 }
 
-.navbar-default{
+.navbar-default {
     background-color: #555;
 }
 
-.navbar-default a{
+.navbar-default a {
     color: white;
 }
+
 .navbar-default .navbar-brand {
     color: white;
 }
 
-.input-list{
+.input-list {
     margin: 40px auto 0;
     padding: 10px;
     display: block;
     float: none;
 }
-.btn.btn-danger
-{
+
+.btn.btn-danger {
     display: block;
     clear: both;
     margin: 0 auto;
 }
+
 .bg-success {
     background-color: #eee;
 }
+
 .table {
     width: 96%;
     max-width: 100%;
     margin: 10px auto;
 }
+
 body {
-    font-family: Raleway,sans-serif;
+    font-family: Raleway, sans-serif;
     font-size: 14px;
     line-height: 1.6;
     color: #636b6f;
     background-color: #fff;
 }
 
-.navbar-brand{
+.navbar-brand {
     font-family: 'Quicksand', sans-serif;
 }
-h2{
+
+h2 {
     font-weight: lighter;
 }

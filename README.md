@@ -5,8 +5,12 @@
 1. SourceTree インストール
 1. 本リポジトリをクローン（置く場所をXAMPPのhtdocにする）
 1. httpd.confの編集
+    1. DocumentRootを右記に変更 C:xampp/htdocs/プロジェクト名/public
 1. XAMPP のphpMyAdminからログインし、「asiaquest」というDBを作る
 1. .envの編集
+    1. 【mysql】  
+    user: 'root'  
+    password: ''
 1. ターミナルを起動し、アプリケーションを配置したディレクトリに移動する
 1. 「composer install」コマンドを実行する
 1. 「composer dump-autoload」を実行する
@@ -16,12 +20,12 @@
 1. ■バグfix課題  
 ◆基本的な流れ  
 bug_01_sampleをチェックアウト  
-bug_01_sample_takeru_chihara　(bug_01_sumple_あなたの名_あなたの性)  でブランチを作成してください。
+bug_01_sample_takeru_chihara　※(bug_01_sumple_あなたの名_あなたの性)  でブランチを作成してください。
 バグを修正する  
 bug_01_sampleにプルリクエストを送信する  
 上記を繰り返す  
 ◆修正内容  
-bug01 バグを修正してください  ※「せい」と「めい」が表示されていません。
+bug01 バグを修正してください  ※「せい」と「めい」が表示されていません。  
 bug02 バグを修正してください  
 bug03 バグを修正してください  
 bug04 バグを修正してください  

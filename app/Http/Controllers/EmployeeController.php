@@ -37,10 +37,10 @@ class EmployeeController extends Controller
 
         // ↓ここからがバグがあります
         if ($request->get('department_id')) {
-            $employees = $employees->where('divisions.department_id', 'like', '%' . $request->get('department_id') . '%');
+            $employees = $employees->where('divisions.department_id', '=', $request->get('department_id'));
         }
         if ($request->get('division_id')) {
-            $employees = $employees->where('employees.division_id', 'like', '%' . $request->get('division_id') . '%');
+            $employees = $employees->where('employees.division_id', '=', $request->get('division_id'));
         }
         // ↑ここまでにバグがあります
 

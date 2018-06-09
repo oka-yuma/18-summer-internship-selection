@@ -81,7 +81,7 @@
                         </thead>
                         <tbody>
                         <!-- 正解はわかると思いますが、その変数はどこで宣言されているかに思いを馳せてください。 -->
-                        @foreach ([] as $employee)
+                        @foreach ($employees as $employee)
                             <tr>
                                 <th scope="row">{{$employee->id}}</th>
                                 <td>{{$employee->family_name}}</td>

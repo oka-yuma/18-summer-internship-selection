@@ -90,9 +90,9 @@
                                 <td>{{$employee->division->department->name}}</td>
                                 <td>{{$employee->division->name}}</td>
                                 <td>{{$employee->position->name}}</td>
-                                <td>{{$employee->birthday_jp}}</td>
+                                <td>{{$employee->birthday_jp->format('Y年m月d日')}}</td>
                                 <td>{{$employee->age}}歳</td>
-                                <td>{{$employee->hire_date}}</td>
+                                <td>{{$employee->hire_date->format('Y年m月d日')}}</td>
                             </tr>
                         @endforeach
                         </tbody>

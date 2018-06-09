@@ -39,12 +39,17 @@ class EmployeeController extends Controller
         // ②なぜバグが出てしまうのかを考える
         // ③どうしたらそうならないかを考える
         //  dd($request->get('department_id'));　等をして、 requestのパラメータに興味を持とう
-        $employees = $employees->where('divisions.department_id', $request->get('department_id'));
-        $employees = $employees->where('employees.division_id',  $request->get('division_id'));
+        if ($request->get('department_id')) {
+            $employees = $employees->where('divisions.department_id', $request->get('department_id'));
+        }
+
+        if ($request->get('division_id')) {
+            $employees = $employees->where('employees.division_id', $request->get('division_id'));
+        }
         // ↑ここまで　バグ
 
         // ソート
-        $employees = $employees->orderBy($request->get('sort_key', 'id'),$request->get('sort_order', 'asc'));
+        $employees = $employees->orderBy($request->get('sort_key', 'id'), $request->get('sort_order', 'asc'));
         $employees = $employees->get();
 
         $allDepartments = Department::getSelectList();
